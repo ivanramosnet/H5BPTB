@@ -26,10 +26,10 @@ $app = JFactory::getApplication();
 <!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 	<head>
+		<meta charset="utf-8">
+		
 		<!-- The following JDOC Head tag loads all the header and meta information from your site config and content. -->
 		<jdoc:include type="head" />
-		
-		<meta charset="utf-8">
 			
 		<!-- Use the .htaccess and remove these lines to avoid edge case issues.
 			More info: h5bp.com/b/378 -->
