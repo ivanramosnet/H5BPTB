@@ -1,10 +1,9 @@
 <?php
+
 /**
- * @version		$Id$
- * @author		Iván Ramos Jiménez
  * @package		Joomla.Site
- * @subpackage	com_coopag
- * @copyright	Copyright (C) 2011 Iván Ramos Jiménez. All rights reserved.
+ * @subpackage	Templates.h5bp
+ * @copyright	Copyright (C) 2011 - 2012 Iván Ramos Jiménez. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  * 
  */
@@ -20,46 +19,77 @@ $app = JFactory::getApplication();
 
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!-- Consider adding an manifest.appcache: h5bp.com/d/Offline -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-	<head>
-		<meta charset="utf-8">
-		
-		<!-- The following JDOC Head tag loads all the header and meta information from your site config and content. -->
-		<jdoc:include type="head" />
-			
-		<!-- Use the .htaccess and remove these lines to avoid edge case issues.
-			More info: h5bp.com/b/378 -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-		<!-- Mobile viewport optimized: j.mp/bplateviewport -->
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		
-		<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
-		
-		<!-- The following five lines load the Blueprint CSS Framework (http://blueprintcss.org). If you don't want to use this framework, delete these lines. -->
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/screen.css" type="text/css" media="screen, projection" />
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/blueprint/print.css" type="text/css" media="print" />
-		<!--[if lt IE 8]><link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-    	
-		<!-- CSS: implied media=all -->
-		<!-- CSS concatenated and minified via ant build script-->
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/style.css">
-		<!-- end CSS-->
-		
-		<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
-		
-		<!-- All JavaScript at the bottom, except for Modernizr / Respond.
-			Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
-			For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
-		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/modernizr-2.0.6.min.js"></script>
-
-	</head>
+<head>
+	<meta charset="utf-8">
 	
-	<body>
+	<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <!-- The following JDOC Head tag loads all the header and meta information from your site config and content. -->
+	<jdoc:include type="head" />
+	
+    <meta name="description" content="">
+    
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width">
+    
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+    
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.css">
+    
+    <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+    
+    <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/libs/modernizr-2.5.3.min.js"></script>
+		
+</head>
+<body>
+	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+	<header>
+	
+	</header>
+	<div role="main">
+		<jdoc:include type="message" />
+		<jdoc:include type="component" />
+	</div>
+	<footer>
+	
+	</footer>
+	
+	<jdoc:include type="modules" name="debug" />
+	
+	<!-- JavaScript at the bottom for fast page loading -->
+
+	<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+	<!-- scripts concatenated and minified via build script -->
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/plugins.js"></script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/script.js"></script>
+	<!-- end scripts -->
+	
+	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+	<script>
+		var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+		s.parentNode.insertBefore(g,s)}(document,'script'));
+	</script>
+</body>
+</html>
+	
 		<div id="container" class="container">
 			<header>
 				<hr class="space" />
@@ -111,31 +141,4 @@ $app = JFactory::getApplication();
 		
 		<jdoc:include type="modules" name="debug" />
 		
-		<!-- JavaScript at the bottom for fast page loading -->
 		
-		<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/jquery-1.6.2.min.js"><\/script>')</script>
-		
-		<!-- scripts concatenated and minified via ant build script-->
-			<script defer src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/plugins.js"></script>
-			<script defer src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/script.js"></script>
-		<!-- end scripts-->
-		
-		<!-- Change UA-XXXXX-X to be your site's ID -->
-		<script>
-			window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-			Modernizr.load({
-				load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-			});
-		</script>
-		
-		<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
-			chromium.org/developers/how-tos/chrome-frame-getting-started -->
-		<!--[if lt IE 7 ]>
-			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-		<![endif]-->
-		
-	</body>
-</html>
