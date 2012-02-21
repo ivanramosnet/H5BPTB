@@ -43,14 +43,55 @@ $app = JFactory::getApplication();
 	<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 	<header>
 	
-	</header>
-	<div role="main">
-		<jdoc:include type="message" />
-		<jdoc:include type="component" />
-	</div>
-	<footer>
+		<div class="navbar navbar-fixed-top">
+	      <div class="navbar-inner">
+	        <div class="container">
+	          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	          </a>
+	          <a class="brand" href="#"><?php echo $app->getCfg('sitename'); ?></a>
+	          <div class="nav-collapse">
+	            <ul class="nav">
+	              <li class="active"><a href="#">Home</a></li>
+	              <li><a href="#about">About</a></li>
+	              <li><a href="#contact">Contact</a></li>
+	            </ul>
+	          </div><!--/.nav-collapse -->
+	        </div>
+	      </div>
+	    </div>
 	
-	</footer>
+	</header>
+	<div class="container">
+		
+		<div class="hero-unit">
+			<jdoc:include type="message" />
+			<jdoc:include type="component" />
+		</div>
+
+		
+		<div class="row">
+			<div class="span4">
+				<jdoc:include type="modules" name="position-9" />
+			</div>
+			<div class="span4">
+				<jdoc:include type="modules" name="position-10" />
+			</div>
+			<div class="span4">
+				<jdoc:include type="modules" name="position-11" />
+			</div>
+		</div>
+		
+		<hr>
+		
+		<footer>
+			<p>
+				<?php echo JText::_('TPL_H5BP_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a>
+			</p>
+		</footer>
+	</div>
 	
 	<jdoc:include type="modules" name="debug" />
 	
