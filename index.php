@@ -76,13 +76,13 @@ $app = JFactory::getApplication();
 			
 			<div class="row">
 				<div class="span4">
-					<jdoc:include type="modules" name="position-9" />
+					<jdoc:include type="modules" name="position-9" style="xhtml"/>
 				</div>
 				<div class="span4">
-					<jdoc:include type="modules" name="position-10" />
+					<jdoc:include type="modules" name="position-10" style="xhtml"/>
 				</div>
 				<div class="span4">
-					<jdoc:include type="modules" name="position-11" />
+					<jdoc:include type="modules" name="position-11" style="xhtml"/>
 				</div>
 			</div>
 		
