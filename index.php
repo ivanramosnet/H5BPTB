@@ -28,8 +28,6 @@ $app = JFactory::getApplication();
     
     <!-- The following JDOC Head tag loads all the header and meta information from your site config and content. -->
 	<jdoc:include type="head" />
-	
-    <meta name="description" content="">
     
     <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
@@ -53,11 +51,7 @@ $app = JFactory::getApplication();
 	          </a>
 	          <a class="brand" href="#"><?php echo $app->getCfg('sitename'); ?></a>
 	          <div class="nav-collapse">
-	            <ul class="nav">
-	              <li class="active"><a href="#">Home</a></li>
-	              <li><a href="#about">About</a></li>
-	              <li><a href="#contact">Contact</a></li>
-	            </ul>
+	            <jdoc:include type="modules" name="position-1" style="none" />
 	          </div><!--/.nav-collapse -->
 	        </div>
 	      </div>
@@ -66,23 +60,31 @@ $app = JFactory::getApplication();
 	</header>
 	<div class="container">
 		
-		<div class="hero-unit">
-			<jdoc:include type="message" />
-			<jdoc:include type="component" />
-		</div>
-
-		
 		<div class="row">
-			<div class="span4">
-				<jdoc:include type="modules" name="position-9" />
+		
+			<div class="span3">
+				<jdoc:include type="modules" name="position-7" style="xhtml"/>
 			</div>
-			<div class="span4">
-				<jdoc:include type="modules" name="position-10" />
+			<div class="span9">
+				<div class="hero-unit">
+					<jdoc:include type="message" />
+					<jdoc:include type="component" />
+				</div>
 			</div>
-			<div class="span4">
-				<jdoc:include type="modules" name="position-11" />
-			</div>
+		
 		</div>
+			
+			<div class="row">
+				<div class="span4">
+					<jdoc:include type="modules" name="position-9" />
+				</div>
+				<div class="span4">
+					<jdoc:include type="modules" name="position-10" />
+				</div>
+				<div class="span4">
+					<jdoc:include type="modules" name="position-11" />
+				</div>
+			</div>
 		
 		<hr>
 		
