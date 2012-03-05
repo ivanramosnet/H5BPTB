@@ -50,9 +50,9 @@ $app = JFactory::getApplication();
 	            <span class="icon-bar"></span>
 	          </a>
 	          <a class="brand" href="#"><?php echo $app->getCfg('sitename'); ?></a>
-	          <div class="nav-collapse">
+	          <nav class="nav-collapse">
 	            <jdoc:include type="modules" name="position-1" style="none" />
-	          </div><!--/.nav-collapse -->
+	          </nav><!--/.nav-collapse -->
 	        </div>
 	      </div>
 	    </div>
@@ -62,15 +62,17 @@ $app = JFactory::getApplication();
 		
 		<div class="row">
 		
-			<div class="span3">
-				<jdoc:include type="modules" name="position-7" style="xhtml"/>
-			</div>
-			<div class="span9">
+			<?php if($this->countModules('left')) : ?>
+				<aside class="span3">
+					<jdoc:include type="modules" name="position-7" style="xhtml"/>
+				</aside>
+			<?php endif; ?>
+			<section class="<?php echo $this->countModules('left') ? 'span9' : 'span12'; ?>">
 				<div class="hero-unit">
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 				</div>
-			</div>
+			</section>
 		
 		</div>
 			
