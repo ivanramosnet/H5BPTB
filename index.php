@@ -10,6 +10,14 @@
 
 defined('_JEXEC') or die;
 
+// check modules
+$showRightColumn	= ($this->countModules('position-3') or $this->countModules('position-6') or $this->countModules('position-8'));
+$showbottom			= ($this->countModules('position-9') or $this->countModules('position-10') or $this->countModules('position-11'));
+$showLeftColumn		= ($this->countModules('position-4') or $this->countModules('position-7') or $this->countModules('position-5'));
+
+if ($showRightColumn==0 and $showLeftColumn==0) $showNoColumns = 1;
+else $showNoColumns = 0;
+
 /* The following line loads the MooTools JavaScript Library */
 JHtml::_('behavior.framework', true);
 
@@ -58,7 +66,7 @@ $app = JFactory::getApplication();
 	          </a>
 	          <a class="brand" href="#"><?php echo $app->getCfg('sitename'); ?></a>
 	          <nav class="nav-collapse">
-	            <jdoc:include type="modules" name="position-1" style="none" />
+	            <jdoc:include type="modules" name="position-1" />
 	          </nav><!--/.nav-collapse -->
 	        </div>
 	      </div>
@@ -68,36 +76,57 @@ $app = JFactory::getApplication();
 	<div class="container">
 		
 		<div class="row">
+			
+			<div class="span12" id="breadcrumbs">
+				<jdoc:include type="modules" name="position-2" style="none"/>
+			</div>
 		
-			<?php if($this->countModules('left')) : ?>
+			<?php if($showLeftColumn) : ?>
 				<aside class="span3">
 					<jdoc:include type="modules" name="position-7" style="xhtml"/>
+					<jdoc:include type="modules" name="position-4" style="xhtml"/>
+					<jdoc:include type="modules" name="position-5" style="xhtml"/>
 				</aside>
 			<?php endif; ?>
-			<section class="<?php echo $this->countModules('left') ? 'span9' : 'span12'; ?>">
-				<div class="hero-unit">
+			<section class="<?php echo ($showNoColumns ? 'span12' : (($showLeftColumn==0 or $showRightColumn==0) ? 'span9':'span6')); ?>">
+				<?php if ($this->countModules('position-12')): ?>
+					<div id="top">
+						<jdoc:include type="modules" name="position-12"/>
+					</div>
+				<?php endif; ?>
+				<div>
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 				</div>
 			</section>
+			<?php if($showRightColumn) : ?>
+				<aside class="span3">
+					<jdoc:include type="modules" name="position-6" style="xhtml"/>
+					<jdoc:include type="modules" name="position-8" style="xhtml"/>
+					<jdoc:include type="modules" name="position-3" style="xhtml"/>
+				</aside>
+			<?php endif; ?>
 		
 		</div>
 			
-			<div class="row">
-				<div class="span4">
-					<jdoc:include type="modules" name="position-9" style="xhtml"/>
+			<?php if ($showbottom) : ?>
+				<div class="row">
+					<div class="span4">
+						<jdoc:include type="modules" name="position-9"/>
+					</div>
+					<div class="span4">
+						<jdoc:include type="modules" name="position-10"/>
+					</div>
+					<div class="span4">
+						<jdoc:include type="modules" name="position-11"/>
+					</div>
 				</div>
-				<div class="span4">
-					<jdoc:include type="modules" name="position-10" style="xhtml"/>
-				</div>
-				<div class="span4">
-					<jdoc:include type="modules" name="position-11" style="xhtml"/>
-				</div>
-			</div>
+			<?php endif ; ?>
 		
 		<hr>
 		
 		<footer>
+			<jdoc:include type="modules" name="position-14" />
 			<p>
 				<?php echo JText::_('TPL_H5BP_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a>
 			</p>
@@ -112,7 +141,17 @@ $app = JFactory::getApplication();
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/bootstrap.min.js"></script>
 	
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/transition.js"></script>
-	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/collapse.js"></script>
+	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/alert.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/modal.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/dropdown.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/scrollspy.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/tab.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/tooltip.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/popover.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/button.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/collapse.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/carousel.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/typeahead.js"></script>
 	
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/script.js"></script>
 	<script>
@@ -122,6 +161,9 @@ $app = JFactory::getApplication();
 		s.parentNode.insertBefore(g,s)}(document,'script'));
 	</script>
 	
+	<script type="text/javascript">
+        jQuery.noConflict();
+	</script>
+	
 </body>
 </html>
-		
