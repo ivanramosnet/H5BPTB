@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site">
-	<name>h5bp</name>
-	<creationDate>20 February 2012</creationDate>
+	<name>H5BP</name>
+	<creationDate>23 April 2012</creationDate>
 	<author>Iván Ramos Jiménez</author>
 	<authorEmail>info@ivan.ramos.name</authorEmail>
 	<authorUrl>http://ivan.ramos.name</authorUrl>
-	<copyright>Copyright (C) 2011-2012 Iván Ramos Jiménez. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2012 Iván Ramos Jiménez. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>2.5.0</version>
+	<version>1.0.0</version>
 	<description>TPL_H5BP_XML_DESCRIPTION</description>
 	
 	<files>
-		<folder>less</folder>
+		<folder>css</folder>
 		<folder>img</folder>
 		<folder>language</folder>
 		<folder>js</folder>
