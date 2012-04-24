@@ -2,7 +2,8 @@
 
 */
 
-
+//Tooltip
+$('.hasTip').tooltip()
 
 
 
