@@ -131,7 +131,7 @@ $app = JFactory::getApplication();
 		<footer>
 			<jdoc:include type="modules" name="position-14" />
 			<p>
-				<?php echo JText::_('TPL_H5BP_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a>
+				<?php echo JText::_('TPL_H5BPTB_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a>
 			</p>
 		</footer>
 	</div>
