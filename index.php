@@ -2,7 +2,7 @@
 
 /**
  * @package		Joomla.Site
- * @subpackage	Templates.h5bp
+ * @subpackage	Templates.h5bptb
  * @copyright	Copyright (C) 2011 - 2012 Iván Ramos Jiménez. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  * 
@@ -115,13 +115,13 @@ $app = JFactory::getApplication();
 			<?php if ($showbottom) : ?>
 				<div class="row">
 					<div class="span4">
-						<jdoc:include type="modules" name="position-9"/>
+						<jdoc:include type="modules" name="position-9" style="xhtml"/>
 					</div>
 					<div class="span4">
-						<jdoc:include type="modules" name="position-10"/>
+						<jdoc:include type="modules" name="position-10" style="xhtml"/>
 					</div>
 					<div class="span4">
-						<jdoc:include type="modules" name="position-11"/>
+						<jdoc:include type="modules" name="position-11" style="xhtml"/>
 					</div>
 				</div>
 			<?php endif ; ?>
@@ -129,10 +129,17 @@ $app = JFactory::getApplication();
 		<hr>
 		
 		<footer>
-			<jdoc:include type="modules" name="position-14" />
-			<p>
-				<?php echo JText::_('TPL_H5BPTB_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a>
-			</p>
+			<div class="row">
+				<div class="span4">
+					<p>
+						<?php echo JText::_('TPL_H5BPTB_POWERED_BY');?> <a href="http://www.joomla.org/">Joomla!&#174;</a>
+					</p>
+					
+				</div>
+				<div class="span4 offset4">
+					<jdoc:include type="modules" name="position-14" />
+				</div>
+			</div>
 		</footer>
 	</div>
 	
