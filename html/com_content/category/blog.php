@@ -74,9 +74,9 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 		$row = $counter / $this->columns ;
 
 		if ($rowcount==1) : ?>
-	<div class="items-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row ; ?>">
+	<div class="row-fluid items-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row ; ?>">
 	<?php endif; ?>
-	<div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>">
+	<div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span<?php echo round((12/$this->columns));?>">
 		<?php
 			$this->item = &$item;
 			echo $this->loadTemplate('item');
