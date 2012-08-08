@@ -18,9 +18,6 @@ $showLeftColumn		= ($this->countModules('position-4') or $this->countModules('po
 if ($showRightColumn==0 and $showLeftColumn==0) $showNoColumns = 1;
 else $showNoColumns = 0;
 
-/* The following line loads the MooTools JavaScript Library */
-JHtml::_('behavior.framework', true);
-
 /* The following line gets the application object for things like displaying the site name */
 $app = JFactory::getApplication();
 ?>
@@ -156,10 +153,6 @@ $app = JFactory::getApplication();
 		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
 		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
 		s.parentNode.insertBefore(g,s)}(document,'script'));
-	</script>
-	
-	<script type="text/javascript">
-        jQuery.noConflict();
 	</script>
 	
 </body>
