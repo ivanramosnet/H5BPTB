@@ -31,10 +31,8 @@ $app = JFactory::getApplication();
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     
-    <!-- The following JDOC Head tag loads all the header and meta information from your site config and content. -->
 	<jdoc:include type="head" />
     
-    <!-- Mobile viewport optimized: h5bp.com/viewport -->
     <meta name="viewport" content="width=device-width">
     
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
