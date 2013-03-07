@@ -3,7 +3,7 @@
 /**
  * @package		Joomla.Site
  * @subpackage	Templates.h5bptb
- * @copyright	Copyright (C) 2011 - 2012 Iván Ramos Jiménez. All rights reserved.
+ * @copyright	Copyright (C) 2011 - 2013 Iván Ramos Jiménez. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  * 
  */
@@ -71,38 +71,42 @@ $app = JFactory::getApplication();
 	</header>
 	<div class="container">
 		
-		<div class="row-fluid">
+		<div class="row">
 			
-			<div class="span12" id="breadcrumbs">
-				<jdoc:include type="modules" name="position-2" style="none"/>
-			</div>
+			<div class="span12">
+			
+				<div id="breadcrumbs">
+					<jdoc:include type="modules" name="position-2" style="none"/>
+				</div>
 		
-			<div class="row-fluid">
-				<?php if($showLeftColumn) : ?>
-					<aside class="span3">
-						<jdoc:include type="modules" name="position-7" style="xhtml"/>
-						<jdoc:include type="modules" name="position-4" style="xhtml"/>
-						<jdoc:include type="modules" name="position-5" style="xhtml"/>
-					</aside>
-				<?php endif; ?>
-				<section class="<?php echo ($showNoColumns ? 'span12' : (($showLeftColumn==0 or $showRightColumn==0) ? 'span9':'span6')); ?>">
-					<?php if ($this->countModules('position-12')): ?>
-						<div id="top">
-							<jdoc:include type="modules" name="position-12"/>
-						</div>
+				<div class="row">
+					<?php if($showLeftColumn) : ?>
+						<aside class="span3">
+							<jdoc:include type="modules" name="position-7" style="xhtml"/>
+							<jdoc:include type="modules" name="position-4" style="xhtml"/>
+							<jdoc:include type="modules" name="position-5" style="xhtml"/>
+						</aside>
 					<?php endif; ?>
-					<div>
-						<jdoc:include type="message" />
-						<jdoc:include type="component" />
-					</div>
-				</section>
-				<?php if($showRightColumn) : ?>
-					<aside class="span3">
-						<jdoc:include type="modules" name="position-6" style="xhtml"/>
-						<jdoc:include type="modules" name="position-8" style="xhtml"/>
-						<jdoc:include type="modules" name="position-3" style="xhtml"/>
-					</aside>
-				<?php endif; ?>
+					<section class="<?php echo ($showNoColumns ? 'span12' : (($showLeftColumn==0 or $showRightColumn==0) ? 'span9':'span6')); ?>">
+						<?php if ($this->countModules('position-12')): ?>
+							<div id="top">
+								<jdoc:include type="modules" name="position-12"/>
+							</div>
+						<?php endif; ?>
+						<div>
+							<jdoc:include type="message" />
+							<jdoc:include type="component" />
+						</div>
+					</section>
+					<?php if($showRightColumn) : ?>
+						<aside class="span3">
+							<jdoc:include type="modules" name="position-6" style="xhtml"/>
+							<jdoc:include type="modules" name="position-8" style="xhtml"/>
+							<jdoc:include type="modules" name="position-3" style="xhtml"/>
+						</aside>
+					<?php endif; ?>
+				</div>
+			
 			</div>
 		
 		</div>
@@ -140,8 +144,8 @@ $app = JFactory::getApplication();
 	
 	<jdoc:include type="modules" name="debug" />
 	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/jquery-1.8.3.min.js"><\/script>')</script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/jquery-1.9.1.min.js"><\/script>')</script>
 	
 	<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/libs/bootstrap/bootstrap.min.js"></script>
 	
