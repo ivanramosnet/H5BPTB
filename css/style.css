@@ -1,10 +1,10 @@
-/* CSS Document for Joomla styles 1.6.x / 1.7.x / 2.5.x */
+/* CSS Document for Joomla styles 2.5 */
 
 /*	================================================================================== 
 	AUTHORS
 	The default Joomla CSS template was originally developed by Barrie North. 
 	This document adjusted for Joomla 1.6 by C.R. van Oudheusden, Joomla-CSS.
-	For more information go to www.joomla-css.nl.
+	For more information go to www.joom-css.nl.
 
 	DISCLAIMER
 	While Joomla-CSS has taken the greatest care in preparing this document. No
@@ -45,7 +45,6 @@ ul.actions li.print-icon a:hover img {}
 /* Email button */
 ul.actions li.email-icon {}
 ul.actions li.email-ico a {}
-ul.actions li.email-ico a
 ul.actions li.email-ico a img {}
 
 /* Editor button */
@@ -615,6 +614,7 @@ div.contact div.contact-miscinfo div.jicons-icons img {}
 div.contact div.contact-miscinfo div.jicons-icons div.contact-misc {}
 div.contact div.contact-miscinfo div.jicons-icons div.contact-misc  p {}
 
+
 /* -------------
    User profile
 ---------------- */
@@ -622,7 +622,7 @@ div.contact div.contact-miscinfo div.jicons-icons div.contact-misc  p {}
 /* Login screen user */
 div.login {}
 div.login h1 {}
-div.login form {}>
+div.login form {}
 div.login form fieldset {}
 div.login form fieldset div.login-fields {}
 div.login form fieldset div.login-fields label#username-lbl.required {}
@@ -631,7 +631,7 @@ div.login form fieldset div.login-fields input#username.validate-username.requir
 div.login form fieldset div.login-fields label#password-lbl.required {}
 div.login form fieldset div.login-fields label#password-lbl.required span.star {}
 div.login form fieldset div.login-fields input#password.validate-password.required {}
-div.login form fieldset div.login-fields button.button {}
+div.login form fieldset button.button {}
 
 /* Show User profile after logged in */
 div.profile {}
@@ -724,7 +724,6 @@ div.profile-edit form#member-profile div a {}
    User registration
 -------------------- */
 div.registration {}
- 
 div.registration form#member-registration {}
 div.registration form#member-registration fieldset {}
 div.registration form#member-registration fieldset legend {}
@@ -768,7 +767,7 @@ div.reset form#user-registration.form-validate fieldset {}
 div.reset form#user-registration.form-validate fieldset dl {}
 div.reset form#user-registration.form-validate fieldset dl dt {}
 div.reset form#user-registration.form-validate fieldset dl dt label#jform_email-lbl.hasTip.required {}
-div.reset form#user-registration.form-validate fieldset dl dt label#jform_email-lbl.hasTip.required span.star
+div.reset form#user-registration.form-validate fieldset dl dt label#jform_email-lbl.hasTip.required span.star {}
 div.reset form#user-registration.form-validate fieldset dl dt dd {}
 div.reset form#user-registration.form-validate fieldset dl dt dd input#jform_email.validate-username.required {}
 div.reset form#user-registration.form-validate div {}
@@ -816,7 +815,7 @@ div.newsfeed-category form#adminForm {}
 div.newsfeed-category form#adminForm fieldset.filters legend.hidelabeltxt {}
 div.newsfeed-category form#adminForm fieldset.filters div.display-limit {}
 div.newsfeed-category form#adminForm fieldset.filters div.display-limit select#limit.inputbox {}
-div.newsfeed-category form#adminForm fieldset.filters div.display-limit select#limit.inputbox option
+div.newsfeed-category form#adminForm fieldset.filters div.display-limit select#limit.inputbox option {}
 
 /* Table */
 div.newsfeed-category form#adminForm table.category {}
@@ -928,7 +927,7 @@ div.weblink-category form#adminForm table.category {}
 /* Table head */
 div.weblink-category form#adminForm table.category thead {}
 div.weblink-category form#adminForm table.category thead tr {}
-div.weblink-category form#adminForm table.category thead tr th.title
+div.weblink-category form#adminForm table.category thead tr th.title {}
 div.weblink-category form#adminForm table.category thead tr th.title a {}
 
 /* Table body */
@@ -952,8 +951,8 @@ div.contentpane iframe {}
 
 
 /* ====================
-   Components & Modules
-===================== */
+   Modules
+======================= */
 
 /* ---------------------------------------------------------
    Breadcrumbs moduleclass suffix = _breadcrumbs
@@ -1024,7 +1023,7 @@ div.search form#searchForm fieldset.phrases div.ordering-box select#ordering opt
 
 div.search form#searchForm fieldset.only {}
 div.search form#searchForm fieldset.only legend {}
-div.search form#searchForm fieldset.only label	
+div.search form#searchForm fieldset.only label {}
 div.search form#searchForm fieldset.only input#area-categories {}
 div.search form#searchForm fieldset.only input#area-contacts {}
 div.search form#searchForm fieldset.only input#area-content {}
@@ -1183,7 +1182,7 @@ div.moduletable_banner div.bannergroup_banner div.bannerfooter {}
 
 /* ----------------------------------------------------------
    Module Archived articles moduleclass suffix = _archivelist
----------------------------------------------------------- */
+------------------------------------------------------------ */
 div.moduletable_archivelist {}
 div.moduletable_archivelist h3 {}
 div.moduletable_archivelist ul.archive-module_archivelist {}

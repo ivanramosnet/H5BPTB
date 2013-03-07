@@ -2,13 +2,13 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
 <extension version="2.5" type="template" client="site">
 	<name>H5BPTB</name>
-	<creationDate>28 November 2012</creationDate>
+	<creationDate>7 March 2013</creationDate>
 	<author>Iván Ramos Jiménez</author>
 	<authorEmail>info@ivan.ramos.name</authorEmail>
 	<authorUrl>http://ivan.ramos.name</authorUrl>
-	<copyright>Copyright (C) 2012 Iván Ramos Jiménez. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2013 Iván Ramos Jiménez. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>2.1</version>
+	<version>2.2</version>
 	<description>TPL_H5BPTB_XML_DESCRIPTION</description>
 	
 	<files>
