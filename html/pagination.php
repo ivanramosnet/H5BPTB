@@ -78,19 +78,11 @@ function pagination_list_footer($list)
 
 function pagination_list_render($list)
 {
-	// Reverse output rendering for right-to-left display.
-	if (!$list['start']['active']) {
-		$class_start = 'class="disabled"';
-	}
-	if (!$list['previous']['active']) {
-		$class_previous = 'class="disabled"';
-	}
-	if (!$list['next']['active']) {
-		$class_next = 'class="disabled"';
-	}
-	if (!$list['end']['active']) {
-		$class_end = 'class="disabled"';
-	}
+		// Reverse output rendering for right-to-left display.
+		$class_start = !$list['start']['active'] ? 'class="disabled"' : '';
+		$class_previous = !$list['previous']['active'] ? 'class="disabled"' : '';
+		$class_next = !$list['next']['active'] ? 'class="disabled"' : '';
+		$class_end = !$list['end']['active'] ? 'class="disabled"' : '';
 		
 		$html = '<ul>';
 		$html .= '<li '.$class_start.'>' . $list['start']['data'] . '</li>';
