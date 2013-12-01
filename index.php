@@ -33,11 +33,9 @@ $pageclass = $params->get('pageclass_sfx');
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
     <jdoc:include type="head" />
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
-
 <!--    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap-theme.min.css">-->
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.css">
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/modernizr2.7.0.min.js"></script>
@@ -45,7 +43,6 @@ $pageclass = $params->get('pageclass_sfx');
 <body id="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('page')) . ' ' . $pageclass; ?>">
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <header>
-
         <div class="navbar navbar-fixed-top">
             <div class="navbar-inner">
                 <div class="container">
@@ -62,18 +59,13 @@ $pageclass = $params->get('pageclass_sfx');
                 </div>
             </div>
         </div>
-
     </header>
     <div class="container">
-
         <div class="row">
-
             <div class="span12">
-
                 <div id="breadcrumbs">
                     <jdoc:include type="modules" name="position-2" style="none"/>
                 </div>
-
                 <div class="row">
                     <?php if ($showLeftColumn) : ?>
                         <aside class="span3">
@@ -101,11 +93,8 @@ $pageclass = $params->get('pageclass_sfx');
                         </aside>
                     <?php endif; ?>
                 </div>
-
             </div>
-
         </div>
-
         <?php if ($showbottom) : ?>
             <div class="row">
                 <div class="span4">
@@ -119,16 +108,13 @@ $pageclass = $params->get('pageclass_sfx');
                 </div>
             </div>
         <?php endif; ?>
-
         <hr>
-
         <footer>
             <div class="row">
                 <div class="span4">
                     <p>
                         <?php echo JText::_('TPL_H5BPTB_POWERED_BY'); ?> <a href="http://www.joomla.org/">Joomla!&#174;</a>
                     </p>
-
                 </div>
                 <div class="span4 offset4">
                     <jdoc:include type="modules" name="position-14" />
@@ -136,9 +122,7 @@ $pageclass = $params->get('pageclass_sfx');
             </div>
         </footer>
     </div>
-
 <jdoc:include type="modules" name="debug" />
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>')</script>
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/vendor/bootstrap.min.js"></script>
