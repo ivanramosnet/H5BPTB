@@ -20,6 +20,9 @@ else
 
 /* The following line gets the application object for things like displaying the site name */
 $app = JFactory::getApplication();
+$params = $app->getParams();
+$menu = $app->getMenu();
+$pageclass = $params->get('pageclass_sfx');
 ?>
 
 <!DOCTYPE html>
@@ -32,22 +35,14 @@ $app = JFactory::getApplication();
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <jdoc:include type="head" />
-
     <meta name="viewport" content="width=device-width">
-
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
-    <style>
-        body {
-            padding-top: 60px;
-            padding-bottom: 40px;
-        }
-    </style>
+
 <!--    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap-theme.min.css">-->
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.css">
-
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/vendor/modernizr2.7.0.min.js"></script>
 </head>
-<body>
+<body id="<?php echo (($menu->getActive() == $menu->getDefault()) ? ('front') : ('page')) . ' ' . $pageclass; ?>">
         <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
     <header>
 
@@ -146,9 +141,7 @@ $app = JFactory::getApplication();
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>')</script>
-
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/vendor/bootstrap.min.js"></script>
-
 <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/script.js"></script>
 <script>
     var _gaq = [['_setAccount', 'UA-XXXXX-X'], ['_trackPageview']];
@@ -158,6 +151,5 @@ $app = JFactory::getApplication();
         s.parentNode.insertBefore(g, s)
     }(document, 'script'));
 </script>
-
 </body>
 </html>
