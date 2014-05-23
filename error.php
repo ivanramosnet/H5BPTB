@@ -2,7 +2,7 @@
 
 /**
  * @package		Joomla.Site
- * @subpackage	Templates.h5bp
+ * @subpackage	Templates.h5bptb
  * @copyright	Copyright (C) 2011 - 2014 Iván Ramos Jiménez. All rights reserved.
  * @license		GNU General Public License version 2 or later; see LICENSE.txt
  * 
@@ -25,15 +25,7 @@ if (!isset($this->error)) {
 		<title><?php echo $this->error->getCode(); ?> - <?php echo $this->title; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap.min.css">
-		<style>
-            body {
-                padding-top: 70px;
-                padding-bottom: 20px;
-            }
-        </style>
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.css">
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/style.min.css">
 		
 		<script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/jui/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 	</head>
