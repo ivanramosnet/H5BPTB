@@ -1,21 +1,22 @@
 <?php
 /**
- * @package		Joomla.Site
- * @subpackage	com_weblinks
- * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Site
+ * @subpackage  com_weblinks
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// no direct access
 defined('_JEXEC') or die;
+
 $class = ' class="first"';
 if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) :
 ?>
-<ul class="unstyled">
-<?php foreach($this->children[$this->category->id] as $id => $child) : ?>
+<ul class="list-unstyled">
+<?php foreach ($this->children[$this->category->id] as $id => $child) : ?>
 	<?php
-	if($this->params->get('show_empty_categories') || $child->numitems || count($child->getChildren())) :
-	if(!isset($this->children[$this->category->id][$id + 1]))
+	if ($this->params->get('show_empty_categories') || $child->numitems || count($child->getChildren())) :
+	if (!isset($this->children[$this->category->id][$id + 1]))
 	{
 		$class = ' class="last"';
 	}
@@ -35,13 +36,13 @@ if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) :
             <?php endif; ?>
 
             <?php if ($this->params->get('show_cat_num_links') == 1) :?>
-			<dl class="weblink-count"><dt>
+			<dl class="dl-horizontal"><dt>
 				<?php echo JText::_('COM_WEBLINKS_NUM'); ?></dt>
 				<dd><?php echo $child->numitems; ?></dd>
 			</dl>
 		<?php endif; ?>
 
-			<?php if(count($child->getChildren()) > 0 ) :
+			<?php if (count($child->getChildren()) > 0 ) :
 				$this->children[$child->id] = $child->getChildren();
 				$this->category = $child;
 				$this->maxLevel--;
