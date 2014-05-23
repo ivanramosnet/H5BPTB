@@ -1,41 +1,50 @@
 <?php
 /**
- * @package		Joomla.Site
- * @subpackage	com_users
- * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
- * @since		1.5
+ * @package     Joomla.Site
+ * @subpackage  com_users
+ *
+ * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
 JHtml::_('behavior.keepalive');
-JHtml::_('behavior.tooltip');
 JHtml::_('behavior.formvalidation');
 ?>
-<div class="reset<?php echo $this->pageclass_sfx?>">
+<div class="reset <?php echo $this->pageclass_sfx?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
-	<h1>
-		<?php echo $this->escape($this->params->get('page_heading')); ?>
-	</h1>
+	<div class="page-header">
+		<h1>
+			<?php echo $this->escape($this->params->get('page_heading')); ?>
+		</h1>
+	</div>
 	<?php endif; ?>
 
-	<form id="user-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=reset.request'); ?>" method="post" class="form-validate form-horizontal">
+	<form id="user-registration" action="<?php echo JRoute::_('index.php?option=com_users&task=reset.request'); ?>" method="post" class="form-validate form-horizontal" role="form">
 
-		<?php foreach ($this->form->getFieldsets() as $fieldset): ?>
-		<p><?php echo JText::_($fieldset->label); ?></p>		<fieldset>
-			<dl class="control-group">
-			<?php foreach ($this->form->getFieldset($fieldset->name) as $name => $field): ?>
-				<dt class="control-label"><?php echo $field->label; ?></dt>
-				<dd class="controls"><?php echo $field->input; ?></dd>
+		<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
+		<p><?php echo JText::_($fieldset->label); ?></p>
+
+		<fieldset>
+			<?php foreach ($this->form->getFieldset($fieldset->name) as $name => $field) : ?>
+				<div class="form-group">
+					<?php $field->labelclass .= " col-sm-3 control-label"; ?>
+					<?php echo $field->label; ?>
+					<div class="col-sm-9">
+						<?php $field->class .= " form-control"; ?>
+						<?php echo $field->input; ?>
+					</div>
+				</div>
 			<?php endforeach; ?>
-			</dl>
 		</fieldset>
 		<?php endforeach; ?>
 
-		<div class="form-actions">
-			<button type="submit" class="validate btn btn-primary"><?php echo JText::_('JSUBMIT'); ?></button>
-			<?php echo JHtml::_('form.token'); ?>
+		<div class="form-group">
+			<div class="col-sm-offset-3 col-sm-9">
+				<button type="submit" class="btn btn-primary validate"><?php echo JText::_('JSUBMIT'); ?></button>
+				<?php echo JHtml::_('form.token'); ?>
+			</div>
 		</div>
 	</form>
 </div>
