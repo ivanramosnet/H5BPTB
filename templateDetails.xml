@@ -12,6 +12,7 @@
 	<description>TPL_H5BPTB_XML_DESCRIPTION</description>
 	<files>
 		<folder>css</folder>
+		<folder>less</folder>
 		<folder>fonts</folder>
 		<folder>html</folder>
 		<folder>img</folder>
