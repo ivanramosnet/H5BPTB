@@ -45,7 +45,7 @@ $app = JFactory::getApplication();
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 		
-			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 				<div class="container">
 					<div class="navbar-header">
 						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -61,7 +61,7 @@ $app = JFactory::getApplication();
 						<jdoc:include type="modules" name="position-0" style="navSearch"/>
 					</div><!--/.nav-collapse -->
 				</div>
-			</div>
+			</nav>
 		
 		
 		<div class="container">
