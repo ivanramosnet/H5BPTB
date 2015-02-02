@@ -6,9 +6,9 @@
 	<author>Iván Ramos Jiménez</author>
 	<authorEmail>info@ivan.ramos.name</authorEmail>
 	<authorUrl>http://ivan.ramos.name</authorUrl>
-	<copyright>Copyright (C) 2014 Iván Ramos Jiménez. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2014-2015 Iván Ramos Jiménez. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
-	<version>3.1</version>
+	<version>3.2</version>
 	<description>TPL_H5BPTB_XML_DESCRIPTION</description>
 	<files>
 		<folder>css</folder>
